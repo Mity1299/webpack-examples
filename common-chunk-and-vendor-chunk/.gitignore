@@ -1,0 +1,6 @@
+dist/*
+
+node_modules/
+
+!node_modules/vendor1.js
+!node_modules/vendor2.js
