@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "webpack-dashboard -- webpack"
+    "build": "webpack-dashboard -- webpack",
+    "watch:build": "webpack-dashboard -- webpack --watch"
   },
   "dependencies": {
     "webpack": "^5.75.0"

@@ -168,7 +168,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["commons-src_utility2_js","commons-src_utility3_js","vendor-node_modules_vendor2_js"], () => (__webpack_require__("./src/pageB.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["commons-src_utility2_js","vendor","commons-src_utility3_js"], () => (__webpack_require__("./src/pageB.js")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

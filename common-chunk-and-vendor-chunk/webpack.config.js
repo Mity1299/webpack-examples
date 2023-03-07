@@ -32,14 +32,18 @@ module.exports = {
       minSize: 0, // 默认30000（30kb），但是demo中的文件都很小，minSize设为0，让每个文件都满足大小条件
       cacheGroups: {
         commons: {
-          chunks: "initial",
+          chunks: "all",
+          // chunks: "async",
+          // chunks: "initial",
           minChunks: 2,
           maxInitialRequests: 5, // 默认为3
+          name: false,
+          // name: "common",
         },
         vendor: {
           test: /node_modules/,
           chunks: "initial",
-          name: false,
+          name: "vendor",
         },
       },
     },
