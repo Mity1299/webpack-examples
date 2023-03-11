@@ -1,0 +1,24 @@
+{
+  "name": "official-guide",
+  "version": "1.0.0",
+  "description": "官方 demo\r 参考链接：https://webpack.js.org/guides/getting-started/#conclusion",
+  "private": true,
+  "scripts": {
+    "serve:prod": "npm run build && serve dist",
+    "build": "webpack-dashboard -- webpack",
+    "build:dashboard": "webpack-dashboard -- webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dashboard": "^3.3.7"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
