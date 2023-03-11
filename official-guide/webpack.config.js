@@ -27,6 +27,13 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
       },
+      /**
+       * 导入xml文件
+       */
+      {
+        test: /\.xml$/i,
+        use: ["xml-loader"],
+      },
     ],
   },
 };
