@@ -1,23 +1,16 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "dist"),
+  entry: {
+    index: "./src/index.js",
+    /**
+     * 新增了一个入口
+     * 这里的作用是可以让webpack对print做单独打包，从而html会引入这个东西
+     */
+    print: "./src/print.js",
   },
-  module: {
-    //从 JavaScript 模块中导入 CSS 文件
-    //即import './style.css'
-    rules: [
-      {
-        test: /\.css$/i,
-        /**
-         * 先执行style-loader，然后执行css-loader
-         * style-loader会使打包后的文件，是用js动态创建style标签进行引入
-         */
-        use: ["style-loader", "css-loader"],
-      },
-    ],
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
 };
