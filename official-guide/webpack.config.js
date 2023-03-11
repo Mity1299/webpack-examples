@@ -4,11 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    /**
-     * 新增了一个入口
-     * 这里的作用是可以让webpack对print做单独打包，从而html会引入这个东西
-     */
-    print: "./src/print.js",
   },
   /**
    * HtmlWebpackPlugin 默认情况下会生成自己的 index.html 文件
@@ -23,4 +18,10 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  mode: "production",
+  // mode: "development",
+  // optimization: {
+  //   //标记导入导出，将生产环境下会摇下来的export模块标记为unused harmony export
+  //   usedExports: true,
+  // },
 };
