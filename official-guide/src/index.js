@@ -2,6 +2,10 @@ import "./style.css";
 import _ from "lodash";
 import Icon from "./icon.png";
 import Data from "./data.xml";
+import yaml from "./data.yaml";
+
+console.log(yaml.title); // output `YAML Example`
+console.log(yaml.owner.name); // output `Tom Preston-Werner`
 
 function component() {
   const element = document.createElement("div");

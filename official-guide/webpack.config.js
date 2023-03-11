@@ -1,4 +1,5 @@
 const path = require("path");
+const yaml = require("yamljs");
 
 module.exports = {
   entry: "./src/index.js",
@@ -33,6 +34,17 @@ module.exports = {
       {
         test: /\.xml$/i,
         use: ["xml-loader"],
+      },
+      /**
+       * 自定义格式
+       */
+      {
+        //后缀
+        test: /\.yaml$/i,
+        type: "json", //处理之后导入的格式
+        parser: {
+          parse: yaml.parse,
+        },
       },
     ],
   },
